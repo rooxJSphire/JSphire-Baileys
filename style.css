@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #6a11cb; /* Warna ungu gradasi */
+    --secondary-color: #2575fc; /* Warna biru gradasi */
+    --background-color: #f0f2f5;
+    --card-background: #ffffff;
+    --text-color: #333;
+    --light-text-color: #f8f9fa;
+    --error-color: #e74c3c;
+    --success-color: #2ecc71;
+    --border-radius: 12px;
+    --box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top */
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: var(--card-background);
+    padding: 30px 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+header h1 .fas {
+    margin-right: 10px;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-radius: var(--border-radius);
+    overflow: hidden; /* Untuk border-radius pada input dan button */
+}
+
+#socialMediaUrl {
+    flex-grow: 1;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius) 0 0 var(--border-radius); /* Rounded left corners */
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#socialMediaUrl:focus {
+    border-color: var(--primary-color);
+}
+
+#downloadBtn {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--light-text-color);
+    border: none;
+    padding: 15px 25px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0; /* Rounded right corners */
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+#downloadBtn:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+#downloadBtn .fas {
+    margin-right: 8px;
+}
+
+.loader {
+    border: 6px solid var(--background-color);
+    border-top: 6px solid var(--secondary-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 30px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.result-area {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+    text-align: left;
+}
+
+.result-area h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+#downloadLinks a {
+    display: block;
+    background-color: var(--success-color);
+    color: var(--light-text-color);
+    padding: 12px 18px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    word-break: break-all; /* Agar URL panjang tidak merusak layout */
+}
+
+#downloadLinks a:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+}
+
+#downloadLinks a .fas {
+    margin-right: 10px;
+}
+
+.error-message {
+    color: var(--light-text-color);
+    background-color: var(--error-color);
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.supported-platforms {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.supported-platforms h3 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+}
+
+.platforms-grid span {
+    background-color: #e9ecef;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    text-align: center;
+    color: #555;
+}
+
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    .input-area {
+        flex-direction: column;
+    }
+    #socialMediaUrl {
+        border-radius: var(--border-radius);
+        margin-bottom: 10px;
+    }
+    #downloadBtn {
+        border-radius: var(--border-radius);
+    }
+    .platforms-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}

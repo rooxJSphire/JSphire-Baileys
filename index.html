@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AiO Social Media Downloader</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-download"></i> AiO Social Media Downloader</h1>
+            <p class="subtitle">Unduh video dan media dari berbagai platform sosial mediamu!</p>
+        </header>
+
+        <main>
+            <div class="input-area">
+                <input type="text" id="socialMediaUrl" placeholder="Masukkan URL dari TikTok, Instagram, YouTube, dll...">
+                <button id="downloadBtn"><i class="fas fa-paper-plane"></i> Unduh</button>
+            </div>
+
+            <div id="loader" class="loader" style="display: none;"></div>
+
+            <div id="resultArea" class="result-area" style="display: none;">
+                <h2>Hasil Unduhan:</h2>
+                <div id="downloadLinks">
+                    </div>
+                <p id="errorMessage" class="error-message" style="display: none;"></p>
+            </div>
+
+            <div class="supported-platforms">
+                <h3>Platform yang Didukung:</h3>
+                <div class="platforms-grid">
+                    <span>Tiktok</span>
+                    <span>Douyin</span>
+                    <span>Capcut</span>
+                    <span>Threads</span>
+                    <span>Instagram</span>
+                    <span>Facebook</span>
+                    <span>Kuaishou</span>
+                    <span>QQ</span>
+                    <span>Espn</span>
+                    <span>Pinterest</span>
+                    <span>Imdb</span>
+                    <span>Imgur</span>
+                    <span>Ifunny</span>
+                    <span>Izlesene</span>
+                    <span>Reddit</span>
+                    <span>Youtube</span>
+                    <span>Twitter</span>
+                    <span>Vimeo</span>
+                    <span>Snapchat</span>
+                    <span>Bilibili</span>
+                    <span>Dailymotion</span>
+                    <span>Sharechat</span>
+                    <span>Likee</span>
+                    <span>Linkedin</span>
+                    <span>Tumblr</span>
+                    <span>Hipi</span>
+                    <span>Telegram</span>
+                    <span>Getstickerpack</span>
+                    <span>Bitchute</span>
+                    <span>Febspot</span>
+                    <span>9GAG</span>
+                    <span>Oke.ru</span>
+                    <span>Rumble</span>
+                    <span>Streamable</span>
+                    <span>Ted</span>
+                    <span>SohuTv</span>
+                    <span>Pornbox</span>
+                    <span>Xvideos</span>
+                    <span>Xnxx</span>
+                    <span>Xiaohongshu</span>
+                    <span>Ixigua</span>
+                    <span>Weibo</span>
+                    <span>Miaopai</span>
+                    <span>Meipai</span>
+                    <span>Xiaoying</span>
+                    <span>National Video</span>
+                    <span>Yingke</span>
+                    <span>Sina</span>
+                    <span>Bluesky</span>
+                    <span>Soundcloud</span>
+                    <span>Mixcloud</span>
+                    <span>Spotify</span>
+                    <span>Zingmp3</span>
+                    <span>Bandcamp</span>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 AiO Downloader. Dibuat dengan ❤️</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
