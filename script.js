@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // GANTI DENGAN API KEY ANDA JIKA DIPERLUKAN OLEH API
     // const API_KEY = "YOUR_API_KEY_HERE"; // Jika API key dikirim sebagai header atau parameter lain
     
-    const API_BASE_URL = "/server.js"; // Arahkan ke proxy backend
+    const API_BASE_URL = "/api/download";
     
     downloadBtn.addEventListener('click', handleDownload);
     socialMediaUrlInput.addEventListener('keypress', (event) => {
